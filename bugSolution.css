@@ -1,0 +1,17 @@
+/* Correct usage of calc() */
+.container {
+  width: 100%;
+}
+
+.element {
+  width: calc(100% - 20px); /* Correct: space around the - operator */
+  height: calc(50% - 10px);
+  box-sizing: border-box; /* ensures padding and border are included in the element's total width and height */
+}
+
+/* Incorrect usage - demonstrates common errors*/
+.element-incorrect {
+  width: calc(100%-20px); /* Incorrect: no space around the operator */
+  height: calc(50%-10px); /* Incorrect: no space around the operator */
+}
+/*To ensure the element-incorrect example shows an error make sure that it is a child element that occupies 100% in width and height of its parent */
